@@ -19,7 +19,16 @@
 <body>
     
     <header id="landing">
-        <div class="screen">
+        <div class="screen" id="inner" 
+        data-tilt
+        data-tilt-max = 15
+        data-tilt-reverse="true"
+        data-tilt-full-page-listening
+    
+        >
+        <!-- 
+             data-tilt-reset='false';
+         -->
            <div class="windowHeadContainer">
                 <div class="iconsContainer">
                     <img src="assets/minimise.png" alt="fake window minimise">
@@ -60,9 +69,12 @@
             el: "#landing",
             color: 0x1d1f21,
             shininess: 42.00,
-            zoom: 0.72
+            zoom: 0.72,
+            waveSpeed: 0.80
         });
     </script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <!-- source: https://micku7zu.github.io/vanilla-tilt.js/ -->
 </body>
 
 </html>
