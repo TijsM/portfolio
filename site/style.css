@@ -1,5 +1,9 @@
+
+/* **********  GENERAL *******************************************/
+
+
 /* 
-dark grey = 626262
+dark grey = 464545
 lighter grey = 8C8C8C
 */
 
@@ -14,6 +18,11 @@ body{
     font-family: 'Manjari', sans-serif;
 }
 
+.hide{
+    opacity: 0;
+}
+/* ********** HEADER *******************************************/
+
 #landing{
     margin: 0px;
     height: 100vh;
@@ -22,20 +31,23 @@ body{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+  
 }
 
 .screen{
-    background-color: #626262;
+    background-color: #464545;
     max-width: 100%;
     width: 60%;
     height: 60%;
     border-radius: 10px;
     margin: auto;
-    box-shadow: 0px 0px 100px 1px rgba(255,255,255,1);
+    box-shadow: 0px 0px 100px 1.50px rgba(255,255,255,0.75);
     box-sizing: border-box; 
     display: flex;
     flex-direction: column;
     transition: transform 0.5s;
+    transform-style: preserve-3d;
+    transform: perspective(3000px);
 }
 
 .iconsContainer{
@@ -82,6 +94,7 @@ body{
 
 .contentContainer .imgContainer
 {
+    
     width: 35%;
     display: flex;
     justify-content: center;
@@ -95,6 +108,9 @@ body{
     border-radius: 15px;
     opacity: 0.75;
     display: flex;
+    transform: translateZ(30px);
+    box-shadow: 0px 0px 25px 1px rgba(255,255,255,0.10);
+
 
 }
 
@@ -109,6 +125,8 @@ body{
     font-size: 2em;
     width: 60%;
     padding: 25px;
+    transform: translateZ(30px);
+    box-shadow: 0px 0px 25px 1px rgba(255,255,255,0.10);
 
 }
 
@@ -132,4 +150,62 @@ body{
 .linksContainter img{
     width: 50px;
     opacity: 0.75;
+    transform: translateZ(30px);
+    box-shadow: 0px 0px 25px 1px rgba(255,255,255,0.10);
 }
+
+
+
+
+/* ********** SECTION SKILLS *******************************************/
+/* skills (section) -> twoSkills(div) -> aSkill (article) */
+.skills {
+    margin: 0px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+    align-items: center;
+    
+}
+.skills h1{
+    font-size: 7em;
+    color: #464545;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.twoSkills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.twoSkills :nth-child(1){
+    margin-bottom: 10%;
+}
+
+.twoSkills :nth-child(2){
+    margin-top: 10%;
+}
+
+article{
+    text-align: center;
+    width: 25%;
+    background-color: rgba(141, 141, 141, 0.671);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+article h2{
+    font-size: 4em;
+    color: white;;
+}
+
+/* ********** SECTION FUTURE *******************************************/
+
+
+
+

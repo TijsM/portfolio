@@ -17,60 +17,129 @@
 
 
 <body>
-    
+
     <header id="landing">
-        <div class="screen" id="inner" 
-        data-tilt
-        data-tilt-max = 15
-        data-tilt-reverse="true"
-        data-tilt-full-page-listening
-    
-        >
-        <!-- 
+        <div class="screen" id="inner" data-tilt data-tilt-max=10 data-tilt-reverse="true"
+            data-tilt-full-page-listening>
+            <!-- 
              data-tilt-reset='false';
+              data-tilt-easing = "cubic-bezier(.03,.98,.52,.99)",
          -->
-           <div class="windowHeadContainer">
+            <div class="windowHeadContainer">
                 <div class="iconsContainer">
                     <img src="assets/minimise.png" alt="fake window minimise">
                     <img src="assets/maximise.png" alt="fake windows maximis">
                     <img src="assets/close.png" alt="fake window clo">
                 </div>
-           </div>
-           <div class="addressContainer">
-               <div>
-                   <class class="addressIcons">
-                       <img src="assets/backWhite.png" alt="fake window back button">
-                       <img src="assets/forwardWhite.png" alt="fake window forward button">
-                       <img src="assets/refreshWhite.png" alt="fake window refresh button">
-                   </class>
-               </div>
+            </div>
+            <div class="addressContainer">
+                <div>
+                    <class class="addressIcons">
+                        <img src="assets/backWhite.png" alt="fake window back button">
+                        <img src="assets/forwardWhite.png" alt="fake window forward button">
+                        <img src="assets/refreshWhite.png" alt="fake window refresh button">
+                    </class>
+                </div>
 
-           </div>
-           <div class="contentContainer">
-               <div class="imgContainer">
+            </div>
+            <div class="contentContainer">
+                <div class="imgContainer">
                     <img src="assets/stickman.png" alt="picture of my head">
-               </div>
-               <div class="aboutMe">
-                   <p class="intro">Hi! I'm <strong>Tijs</strong></p>
-                   <p>I'm a webdeveloper.</p>
-                   <br>
-                   <p>But more than that, if you want, we can build an entire project together!</p>
-               </div>
-           </div>
-           <div class="linksContainter">
-                <img src="assets/linkedin_white.png" alt="link to linkedin">
-                <img src="assets/github_white.png" alt="link to my github profile">
-           </div>
+                </div>
+                <div class="aboutMe">
+                    <p class="intro">Hi! I'm <strong>Tijs</strong></p>
+                    <p>I'm a webdeveloper.</p>
+                    <br>
+                    <p>But more than that, if you want, we can build an entire project together!</p>
+                </div>
+            </div>
+            <div class="linksContainter">
+                <a href="https://be.linkedin.com/in/tijs-martens-4043aa136/en?trk=public_profile_locale_name"
+                    target="_blank"><img src="assets/linkedin_white.png" alt="link to linkedin"></a>
+                <a href="https://github.com/TijsM" target="_blank"><img src="assets/github_white.png"
+                        alt="link to my github profile"></a>
+            </div>
         </div>
     </header>
 
-    
+    <section class="skills">
+        <h1>Skills</h1>
+
+        <div class="twoSkills">
+            <article class="aSkill">
+                <h2>Java</h2>
+                <p>The first technologie I learned was Java. It was the language of choice at my college HoGent.</p>
+            </article>
+
+            <article class="aSkill">
+                <h2>SQL</h2>
+                <p>A lot of projects need a database. For this reason i learned SQL.</p>
+            </article>
+        </div>
+        <div class="twoSkills">
+            <article class="aSkill">
+                <h2>javaScript</h2>
+                <p>Fast I realised I was really interested in the web. I started to experment with JavaScript.</p>
+            </article>
+
+            <article class="aSkill">
+                <h2>C#</h2>
+                <p>As I wanted to make powerfull websites, I needed to make API’s. I learned to make REST API’s with C#.
+                </p>
+            </article>
+        </div>
+        <div class="twoSkills">
+            <article class="aSkill">
+                <h2>Angular</h2>
+                <p>The first JavaScript framework I picked up was Angular.</p>
+            </article>
+
+            <article class="aSkill">
+                <h2>PHP</h2>
+                <p>I did an exchange program as a student to Copenhagen. At this school the language of choice was PHP
+                </p>
+            </article>
+        </div>
+
+
+
+    </section>
+
+
+    <section class="skills futureSkills">
+        <h1>Skills</h1>
+
+        <div class="twoSkills">
+            <article class="aSkill">
+                <h2>React</h2>
+                <p>Why only learn one JavaScript framework? Learning this by myself.</p>
+            </article>
+            <article class="aSkill">
+                <h2>React Native</h2>
+                <p>I did an exchange program as a student to Copenhagen. At this school the language of choice was PHP
+                </p>
+            </article>
+        </div>
+
+        <div class="twoSkills">
+            <article class="aSkill">
+                <h2>Node.js</h2>
+                <p>If I think I am good enough with react, I will give app-development a try.</p>
+            </article>
+
+            <article class="aSkill hide">
+                <h2>PHP</h2>
+                <p>I did an exchange program as a student to Copenhagen. At this school the language of choice was PHP
+                </p>
+            </article>
+        </div>
+    </section>
     <script>VANTA.WAVES({
             el: "#landing",
             color: 0x1d1f21,
             shininess: 42.00,
-            zoom: 0.72,
-            waveSpeed: 0.80
+            zoom: 0.65,
+            waveSpeed: 0.25
         });
     </script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
