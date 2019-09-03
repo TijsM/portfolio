@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="reset.css" class="css">
     <link rel="stylesheet" href="style.css" class="css">
     <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
 
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
@@ -65,63 +65,58 @@
     <section class="skills">
         <h1>Skills</h1>
 
-        <div class="twoSkills">
-            <article class="aSkill">
+        <div class="twoSkills" >
+            <article class="aSkill" data-aos="fade-up-right">
                 <h2>Java</h2>
                 <p>The first technologie I learned was Java. It was the language of choice at my college HoGent.</p>
             </article>
 
-            <article class="aSkill">
+            <article class="aSkill" data-aos="fade-up-left">
                 <h2>SQL</h2>
                 <p>A lot of projects need a database. For this reason i learned SQL.</p>
             </article>
         </div>
         <div class="twoSkills">
-            <article class="aSkill">
+            <article class="aSkill" data-aos="fade-up-right">
                 <h2>javaScript</h2>
                 <p>Fast I realised I was really interested in the web. I started to experment with JavaScript.</p>
             </article>
 
-            <article class="aSkill">
+            <article class="aSkill" data-aos="fade-up-left">
                 <h2>C#</h2>
                 <p>As I wanted to make powerfull websites, I needed to make API’s. I learned to make REST API’s with C#.
                 </p>
             </article>
         </div>
         <div class="twoSkills">
-            <article class="aSkill">
+            <article class="aSkill" data-aos="fade-up-right">
                 <h2>Angular</h2>
                 <p>The first JavaScript framework I picked up was Angular.</p>
             </article>
 
-            <article class="aSkill">
+            <article class="aSkill" data-aos="fade-up-left">
                 <h2>PHP</h2>
                 <p>I did an exchange program as a student to Copenhagen. At this school the language of choice was PHP
                 </p>
             </article>
         </div>
-
-
-
     </section>
-
-
     <section class="skills futureSkills">
         <h1>Skills</h1>
 
         <div class="twoSkills">
-            <article class="aSkill">
+            <article class="aSkill" data-aos="fade-up-right">
                 <h2>React</h2>
                 <p>Why only learn one JavaScript framework? Learning this by myself.</p>
             </article>
-            <article class="aSkill">
-                <h2>React Native</h2>
+            <article class="aSkill" data-aos="fade-up-left">
+                <h2 class="h2ToBig">React Native</h2>
                 <p>I did an exchange program as a student to Copenhagen. At this school the language of choice was PHP
                 </p>
             </article>
         </div>
 
-        <div class="twoSkills">
+        <div class="twoSkills" data-aos="fade-up-right">
             <article class="aSkill">
                 <h2>Node.js</h2>
                 <p>If I think I am good enough with react, I will give app-development a try.</p>
@@ -143,6 +138,10 @@
         });
     </script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- source: https://micku7zu.github.io/vanilla-tilt.js/ -->
 </body>
 
