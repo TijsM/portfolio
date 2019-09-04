@@ -222,8 +222,13 @@ article h2 {
 }
 
 
-/* ********** SECTION FUTURE *******************************************/
+/* ********** SECTION CONTACT *******************************************/
 
+.futureSkills{
+    clip-path: polygon(50% 10%, 84% 0, 100% 0, 100% 79%, 78% 79%, 50% 89%, 23% 78%, 0 78%, 0 0, 20% 0);
+    padding-top: 200px;
+    padding-bottom: 350px;
+}
 .contact {
     margin-top: 150px;
 }
@@ -241,15 +246,19 @@ form {
     align-items: center;
 }
 
-input {
+input, .textArea {
     width: 75%;
     margin: 20px;
-
+    padding-left: 25px;
     height: 50px;
     border: #464545 solid 2px;
     border-radius: 15px;
 }
 
+.textArea{
+    height: auto;
+    padding: 25px;
+}
 .label {
     margin: 10px 15% 10px 0px;
     margin-left: 15%;
@@ -260,9 +269,7 @@ input {
     font-size: 2em;
 }
 
-.textArea {
-    height: 350px;
-}
+
 
 .button {
 
@@ -282,17 +289,19 @@ input {
 
 
 
-/* ********** SECTION FUTURE *******************************************/
+/* ********** SECTION FOOTER *******************************************/
 
 
 footer{
     background-color: #464545;
-   
+    clip-path: polygon(0 0, 10% 0, 48% 24%, 90% 0, 100% 0, 100% 100%, 0 100%);
+    /* https://bennettfeely.com/clippy/ */
     padding: 100px;
     margin-top: 100px;
 }
 
 .footerContainer{
+    margin-top: 100px;
     width: 100%;
     display: flex;
     flex-direction: row;
