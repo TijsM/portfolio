@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css" class="css">
     <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
 
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
@@ -55,15 +57,13 @@
             </div>
             <div class="linksContainter">
                 <a href="https://be.linkedin.com/in/tijs-martens-4043aa136/en?trk=public_profile_locale_name"
-                    target="_blank"><img src="assets/linkedin_white.png" alt="link to linkedin"></a>
-                <a href="https://github.com/TijsM" target="_blank"><img src="assets/github_white.png"
-                        alt="link to my github profile"></a>
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/TijsM" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-            
+
         </div>
 
-        <div class="phone" data-tilt data-tilt-max=10 data-tilt-reverse="true"
-        data-tilt-full-page-listening>
+        <div class="phone" data-tilt data-tilt-max=10 data-tilt-reverse="true" data-tilt-full-page-listening>
             <div class="deviceScreen">
                 <div class="nodge">
 
@@ -80,15 +80,15 @@
                 <div class="links_containter">
                     <a href="https://be.linkedin.com/in/tijs-martens-4043aa136/en?trk=public_profile_locale_name"
                         target="_blank">
-                        <img src="assets/linkedin_white.png" alt="link to linkedin">
+                        <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="https://github.com/TijsM" target="_blank">
-                        <img src="assets/github_white.png" alt="link to my github profile">
+                        <i class="fab fa-github"></i>
                     </a>
                 </div>
                 <div class="homeBar">
-                
-                    </div>
+
+                </div>
             </div>
         </div>
     </header>
@@ -98,37 +98,85 @@
 
         <div class="twoSkills">
             <article class="aSkill" data-aos="fade-up-right">
-                <h2>Java</h2>
-                <p>The first technologie I learned was Java. It was the language of choice at my college HoGent.</p>
+                <div class="innerCard">
+                    <div class="frontCard">
+                        <h2>Java</h2>
+                        <p>
+                            The first technologie I learned was Java. It was the language of choice at my college
+                            HoGent.
+                        </p>
+                    </div>
+                    <div class="backCard">
+                        this is a fucking test
+                    </div>
+                </div>
             </article>
-
             <article class="aSkill" data-aos="fade-up-left">
-                <h2>SQL</h2>
-                <p>A lot of projects need a database. For this reason i learned SQL.</p>
-            </article>
-        </div>  
-        <div class="twoSkills">
-            <article class="aSkill" data-aos="fade-up-right">
-                <h2>javaScript</h2>
-                <p>Fast I realised I was really interested in the web. I started to experment with JavaScript.</p>
-            </article>
-
-            <article class="aSkill" data-aos="fade-up-left">
-                <h2>C#</h2>
-                <p>As I wanted to make powerfull websites, I needed to make API’s. I learned to make REST API’s with C#.
-                </p>
+                <div class="innerCard">
+                    <div class="frontCard">
+                        <h2>SQL</h2>
+                        <p>A lot of projects need a database. For this reason i learned SQL.</p>
+                    </div>
+                    <div class="backCard">
+                        this is a fucking test
+                    </div>
+                </div>
             </article>
         </div>
         <div class="twoSkills">
             <article class="aSkill" data-aos="fade-up-right">
-                <h2>Angular</h2>
-                <p>The first JavaScript framework I picked up was Angular.</p>
+                <div class="innerCard">
+                    <div class="frontCard">
+                        <h2>javaScript</h2>
+                        <p>Fast I realised I was really interested in the web. I started to experment with JavaScript.
+                        </p>
+                    </div>
+                    <div class="backCard">
+                        this is a fucking test
+                    </div>
+                </div>
             </article>
 
             <article class="aSkill" data-aos="fade-up-left">
-                <h2>PHP</h2>
-                <p>I did an exchange program as a student to Copenhagen. At this school the language of choice was PHP
-                </p>
+                <div class="innerCard">
+                    <div class="frontCard">
+                        <h2>C#</h2>
+                        <p>
+                            As I wanted to make powerfull websites, I needed to make API’s. I learned to make REST API’s
+                            with C#.
+                        </p>
+                    </div>
+                    <div class="backCard">
+                        this is a fucking test
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="twoSkills">
+            <article class="aSkill" data-aos="fade-up-right">
+                <div class="innerCard">
+                    <div class="frontCard">
+                        <h2>Angular</h2>
+                        <p>The first JavaScript framework I picked up was Angular.</p>
+                    </div>
+                    <div class="backCard">
+                        this is a fucking test
+                    </div>
+                </div>
+            </article>
+
+            <article class="aSkill" data-aos="fade-up-left">
+                <div class="innerCard">
+                    <div class="frontCard">
+                        <h2>PHP</h2>
+                        <p>I did an exchange program as a student to Copenhagen. At this school the language of choice
+                            was PHP
+                        </p>
+                    </div>
+                    <div class="backCard">
+                        this is a fucking test
+                    </div>
+                </div>
             </article>
         </div>
     </section>
@@ -137,22 +185,43 @@
 
         <div class="twoSkills">
             <article class="aSkill" data-aos="fade-up-right">
-                <h2>React</h2>
-                <p>Why only learn one JavaScript framework? Learning this by myself.</p>
+                <div class="innerCard">
+                    <div class="frontCard">
+                        <h2>React</h2>
+                        <p>Why only learn one JavaScript framework? Learning this by myself.</p>
+                    </div>
+                    <div class="backCard">
+                        this is a fucking test
+                    </div>
+                </div>
             </article>
             <article class="aSkill" data-aos="fade-up-left">
-                <h2 class="h2ToBig">React Native</h2>
-                <p>If I think I am good enough with react, I will give app-development a try.</p>
-                </p>
+                <div class="innerCard">
+                    <div class="frontCard">
+                        <h2 class="h2ToBig">React Native</h2>
+                        <p>If I think I am good enough with react, I will give app-development a try.</p>
+                        </p>
+                    </div>
+                    <div class="backCard">
+                        this is a fucking test
+                    </div>
+                </div>
             </article>
         </div>
 
         <div class="twoSkills" data-aos="fade-up-right">
             <article class="aSkill">
-                <h2>Node.js</h2>
-                <p>
-                    Looking forward to make an entire project with only javascript. Frontend and Backend.
-                </p>
+                <div class="innerCard">
+                    <div class="frontCard">
+                        <h2>Node.js</h2>
+                        <p>
+                            Looking forward to make an entire project with only javascript. Frontend and Backend.
+                        </p>
+                    </div>
+                    <div class="backCard">
+                        this is a fucking test
+                    </div>
+                </div>
             </article>
 
             <article class="aSkill hide">
@@ -188,14 +257,18 @@
         <div class="footerContainer">
             <div class="linkedIn">
                 <a href="https://be.linkedin.com/in/tijs-martens-4043aa136/en?trk=public_profile_locale_name"
-                    target="_blank"><img src="assets/linkedin_white.png" alt="link to linkedin"></a>
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                <!-- <a href="https://be.linkedin.com/in/tijs-martens-4043aa136/en?trk=public_profile_locale_name"
+                    target="_blank"><img src="assets/linkedin_white.png" alt="link to linkedin"></a> -->
             </div>
             <div class="name">
                 <h1>Tijs Martens</h1>
             </div>
             <div class="github">
-                <a href="https://github.com/TijsM" target="_blank"><img src="assets/github_white.png"
-                        alt="link to my github profile"></a>
+                <a href="https://github.com/TijsM" target="_blank">
+                    <i class="fab fa-github"></i></a>
+                <!-- <a href="https://github.com/TijsM" target="_blank"><img src="assets/github_white.png"
+                        alt="link to my github profile"></a> -->
             </div>
         </div>
     </footer>
