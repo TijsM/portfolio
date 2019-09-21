@@ -1,6 +1,5 @@
 /* **********  GENERAL *******************************************/
 
-
 /* 
 dark grey = 464545
 lighter grey = 8C8C8C
@@ -14,6 +13,7 @@ lighter grey = 8C8C8C
 
 body {
     font-family: 'Manjari', sans-serif;
+    
 }
 
 .hide {
@@ -30,7 +30,9 @@ strong {
     font-weight: bolder;
 }
 
-
+.phone{
+    display: none;
+}
 /* ********** HEADER *******************************************/
 
 #landing {
@@ -152,9 +154,7 @@ strong {
     box-shadow: 0px 0px 25px 1px rgba(255, 255, 255, 0.10);
 }
 
-
 /* ********** SECTION SKILLS *******************************************/
-
 
 /* skills (section) -> twoSkills(div) -> aSkill (article) */
 
@@ -179,6 +179,7 @@ strong {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    max-width: 100%;
 }
 
 .twoSkills :nth-child(1) {
@@ -193,6 +194,7 @@ strong {
 article {
     text-align: center;
     width: 350px;
+    min-width: 350px;
     margin-left: 150px;
     margin-right: 150px;
     background-color: rgba(141, 141, 141, 0.671);
@@ -206,7 +208,6 @@ article h2 {
     ;
 }
 
-
 /* ********** SECTION FUTURE *******************************************/
 
 .futureSkills {
@@ -215,26 +216,30 @@ article h2 {
     width: 100%;
     margin: 0px;
     margin-top: 75px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .futureSkills h1 {
     color: white;
 }
 
-
 /* ********** SECTION CONTACT *******************************************/
 
-.futureSkills{
+.futureSkills {
     clip-path: polygon(50% 10%, 84% 0, 100% 0, 100% 79%, 78% 79%, 50% 89%, 23% 78%, 0 78%, 0 0, 20% 0);
     padding-top: 200px;
     padding-bottom: 350px;
 }
+
 .contact {
-    margin-top: 150px;
+    margin-top: 0px;
 }
 
 .contact h1 {
+    padding: 50px;
     color: #464545;
+    font-size: 4em;
 }
 
 form {
@@ -242,7 +247,6 @@ form {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
-
     align-items: center;
 }
 
@@ -255,10 +259,11 @@ input, .textArea {
     border-radius: 15px;
 }
 
-.textArea{
+.textArea {
     height: auto;
     padding: 25px;
 }
+
 .label {
     margin: 10px 15% 10px 0px;
     margin-left: 15%;
@@ -269,10 +274,7 @@ input, .textArea {
     font-size: 2em;
 }
 
-
-
 .button {
-
     padding: 1em 3em;
     border: 0.16em solid #464545;
     margin: 0 0.3em 0.3em 0;
@@ -286,13 +288,9 @@ input, .textArea {
     width: 200px;
 }
 
-
-
-
 /* ********** SECTION FOOTER *******************************************/
 
-
-footer{
+footer {
     background-color: #464545;
     clip-path: polygon(0 0, 10% 0, 48% 24%, 90% 0, 100% 0, 100% 100%, 0 100%);
     /* https://bennettfeely.com/clippy/ */
@@ -300,7 +298,7 @@ footer{
     margin-top: 100px;
 }
 
-.footerContainer{
+.footerContainer {
     margin-top: 100px;
     width: 100%;
     display: flex;
@@ -309,12 +307,149 @@ footer{
     align-content: center;
 }
 
-.linkedIn img, .github img{
+.linkedIn img, .github img {
     width: 75px;
     opacity: 0.75;
 }
 
-footer h1{
+footer h1 {
     color: white;
     font-size: 5em;
+}
+
+/* ********** MEDIA queries *******************************************************************/
+
+/* ********************************************************************************************/
+
+@media screen and (max-width: 1275px){  
+    .aboutMe p{
+        font-size: 0.9em;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1050px) {
+    /* ********** GENERAL - MOBILE *******************************************************************/
+    
+   
+    /* ********** HEADER - MOBILE *******************************************************************/
+    header{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    
+    .screen{
+        display: none;
+    }
+
+    .phone{
+        display: flex;
+        width: 300px;
+        height: 526px;
+        background-color: black;
+        border-radius: 25px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 100px 1.50px rgba(255, 255, 255, 0.75);
+
+    }
+
+    .deviceScreen{
+        width: 100%;
+        height: 95%;
+        padding-top: 25px;
+        margin: 15px;
+        background: rgb(149,142,145);
+        background: radial-gradient(circle, rgba(149,142,145,1) 0%, rgba(36,37,38,1) 100%);
+        /* background-color: #464545; */
+        border-radius: 25px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .nodge{
+        background-color: black;
+        width: 55%;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        border-radius: 15px;
+    }
+
+    .img_Container{
+        height: 25%;
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .img_Container img{
+        width: auto;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .aboutMe{
+        width: 90%;
+        height: 40%;
+        box-sizing: border-box;
+        font-size: 1em;
+        margin:0px;
+        margin-top: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+        box-sizing: border-box;
+    }
+
+    .aboutMe p{
+        font-size: 1.3em;
+    }
+
+
+    .links_containter{
+        height: 15%;
+        width: 100%;
+        box-sizing: content-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+
+    .links_containter img{
+        width: 30px;
+    }
+
+    .homeBar{
+        height: 5px;
+        width:   35%;
+        border-radius: 5px;
+        background-color: white;    
+        position: absolute;
+        bottom: 20px;
+    }
+
+    
+    
+    /* ********** SKILLS - MOBILE *******************************************************************/
+    .twoSkills {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+    .aSkill {
+        margin: 25px 0px 0px 0px !important;
+    }
+    /* ********** FUTURE - MOBILE *******************************************************************/
+    /* ********** CONTACT - MOBILE *******************************************************************/
+    /* ********** FOOTER - MOBILE *******************************************************************/
 }
