@@ -1,5 +1,11 @@
 /* **********  GENERAL *******************************************/
 
+$bg: #fef5df;
+$darkGrey: #464545;
+$darkGreyVague: #464545ea;
+
+
+
 /* 
 dark grey = 464545
 lighter grey = 8C8C8C
@@ -12,7 +18,7 @@ lighter grey = 8C8C8C
 }
 
 body {
-	font-family: "Manjari", sans-serif;
+	font-family: 'Actor', sans-serif;
 }
 
 .hide {
@@ -45,7 +51,7 @@ strong {
 }
 
 .screen {
-	background-color: #464545;
+	background-color: $darkGrey;
 	max-width: 100%;
 	width: 60%;
 	height: 60%;
@@ -61,7 +67,7 @@ strong {
 }
 
 .windowHeadContainer {
-	background-color: #464545;
+	background-color: $darkGrey;
 	display: block;
 	height: 45px;
 	border-radius: 15px;
@@ -198,95 +204,207 @@ strong {
 	align-items: center;
 
 	h1 {
-		color: #464545;
+		color: $darkGrey;
 		font-weight: bolder;
 		text-align: center;
 		margin-bottom: 75px;
 	}
 }
 
-.twoSkills {
+.skillContainer {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	max-width: 100%;
 
+
+
 	.aSkill {
 		/* background-color: ; */
-		width: 350px;
-		min-width: 350px;
-		height: 300px;
-		margin-left: 150px;
-		margin-right: 150px;
-		perspective: 1000px;
-		/* padding: 5px; */
-		margin-top: 8px;
+		width: 300px;
+		height:  400px;
 
-		.innerCard {
-			position: relative;
+		border-radius: 15px;
+
+		margin: 50px;
+
+		// margin-left: 45px;
+		// margin-right: 45px;
+		// perspective: 1000px;
+		// margin-top: 8px;
+
+
+		
+		background-image: url("assets/react.png");
+		
+		background-size: 40%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: $darkGrey;
+
+		padding: 15px;
+		
+
+		.overlay {
 			width: 100%;
 			height: 100%;
-			text-align: center;
-			background-color: rgba(141, 141, 141, 0.671);
-			/* padding: 25px 30px 25px 30px; */
+		
 			border-radius: 15px;
-			transition: transform 1.1s;
-			transform-style: preserve-3d;
+		
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 2fr 2fr 1fr;
+		
+			background-image: none;
+			background-color:$darkGreyVague;
+			
+			// color: $bg;
+			color: white;
+			opacity: 0;
+			transition: all 0.8s;
+		
+			// font-family: "Playfair Display", serif;
 
-			.frontCard,
-			.backCard {
-				padding: 35px;
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				margin: 0px;
-				backface-visibility: hidden;
+			.cardTitle {
+				font-size: 30px;
+				line-height: 20px;
+				padding-top: 30px;
+				padding-bottom: 35px;
+				margin-bottom: 35px;
+			
+				transform: translateY(40px);
+				// moving head up
+				transition: all 2s;
+
+				hr {
+					display: block;
+					width: 75px;
+			
+					margin-left: 0px;	
+
+					border: none;
+					border-bottom: solid 2px $bg;
+			
+					position: absolute;
+					bottom: 0;
+					left: 20px;
+			
+					transition: all 5s;
+				}
 			}
 
-			.backCard {
-				/* background-color: black; */
-				/* color: white; */
-				transform: rotateY(180deg);
+			.info {
+				font-size: 22px;
+				line-height: 10px;
+				font-weight: bold;
+				line-height: 1.2em;
+				opacity: 0;
+				transform: translateY(40px);
+				transition: all 0.7s;
+				background-image: none;
+				margin-bottom: 75px;
+			}
+			
+			.linkToProject {
+				font-size: 12px;
+				opacity: 0;
+				letter-spacing: 1px;
+				font-family: "Lato", sans-serif;
+				transform: translateY(60px);
+				transition: all 0.7s;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				background-image: none;
+				position: relative;
+				bottom: 20px;
+				p{
+					margin: 15px;
+				}
+				p,
+				.icoContainer {
+					width: 100px;
+					text-align: center;
+					background-image: none;
+				}
+			
+				i {
+					font-size: 35px;
+				}
 			}
 		}
-
 		h2 {
 			font-size: 4em;
 			color: white;
 		}
 	}
-}
 
-.twoSkills :nth-child(1) {
-	margin-bottom: 50px;
-}
+	:hover .overlay {
+		opacity: 1;
+		& .cardTitle {
+			transform: translateY(0px);
+		}
+	
+		& hr {
+			width: 250px;
+			transition-delay: 0.1s;
+		}
+	
+		& hr {
+			animation: hrWidthAnimation 2s linear;
+			// width: 100px;
+		}
+	
+		& .info {
+			transform: translateY(0px);
+			transition-delay: 0.3s;
+			opacity: 1;
+		}
+	
+		& .linkToProject {
+			transform: translateY(0px);
+			transition-delay: 0.5s;
+			opacity: 1;
+		}
+	}
 
-.twoSkills :nth-child(2) {
-	margin-top: 60px;
-}
-
-.aSkill:hover .innerCard {
-	transform: rotateY(180deg);
+	:nth-child(1){
+		background-image: url("assets/java.png");
+	}
+	:nth-child(2){
+		background-image: url("assets/sql.png");
+	}
+	:nth-child(3){
+		background-image: url("assets/JavaScript.png");
+	}
+	:nth-child(4){
+		background-image: url("assets/cSharp.png");
+	}
+	:nth-child(5){
+		background-image: url("assets/angular.png");
+	}
+	:nth-child(6){
+		background-image: url("assets/php.png");
+	}
+	
 }
 
 /* ********** SECTION FUTURE *******************************************/
 
 .futureSkills {
-	background-color: #464545;
+	background-color: $darkGrey;
 	padding-top: 150px;
 	width: 100%;
 	margin: 0px;
 	margin-top: 75px;
 	margin-bottom: 0px;
-    padding-bottom: 0px;
-    
+	padding-bottom: 0px;
 
-     h1 {
-        color: white;
-    }
+	h1 {
+		color: white;
+	}
 }
-
-
 
 /* ********** SECTION CONTACT *******************************************/
 
@@ -302,7 +420,7 @@ strong {
 
 .contact h1 {
 	padding: 50px;
-	color: #464545;
+	color: $darkGrey;
 	font-size: 4em;
 }
 
@@ -320,7 +438,7 @@ input,
 	margin: 20px;
 	padding-left: 25px;
 	height: 50px;
-	border: #464545 solid 2px;
+	border: $darkGrey solid 2px;
 	border-radius: 15px;
 }
 
@@ -341,13 +459,13 @@ input,
 
 .button {
 	padding: 1em 3em;
-	border: 0.16em solid #464545;
+	border: 0.16em solid $darkGrey;
 	margin: 0 0.3em 0.3em 0;
 	box-sizing: border-box;
 	text-decoration: none;
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
-	color: #464545;
+	color: $darkGrey;
 	text-align: center;
 	transition: all 0.15s;
 	width: 200px;
@@ -356,7 +474,7 @@ input,
 /* ********** SECTION FOOTER *******************************************/
 
 footer {
-	background-color: #464545;
+	background-color: $darkGrey;
 	clip-path: polygon(0 0, 10% 0, 48% 24%, 90% 0, 100% 0, 100% 100%, 0 100%);
 	/* https://bennettfeely.com/clippy/ */
 	padding: 100px;
@@ -416,7 +534,6 @@ footer h1 {
 		display: flex;
 		width: 300px;
 		height: 526px;
-		background-color: black;
 		border-radius: 25px;
 		box-sizing: border-box;
 		box-shadow: 0px 0px 100px 1.5px rgba(255, 255, 255, 0.75);
@@ -429,7 +546,7 @@ footer h1 {
 		margin: 15px;
 		background: rgb(149, 142, 145);
 		background: radial-gradient(circle, rgba(149, 142, 145, 1) 0%, rgba(36, 37, 38, 1) 100%);
-		/* background-color: #464545; */
+		/* background-color: $darkGrey; */
 		border-radius: 25px;
 		box-sizing: border-box;
 		display: flex;
@@ -518,4 +635,47 @@ footer h1 {
 	/* ********** FUTURE - MOBILE *******************************************************************/
 	/* ********** CONTACT - MOBILE *******************************************************************/
 	/* ********** FOOTER - MOBILE *******************************************************************/
+}
+
+
+@keyframes hrWidthAnimation {
+	0% {
+		width: 0%;
+		margin-left: 45px;
+	}
+	10% {
+		width: 150px;
+		margin-left: 30px;
+	}
+
+	20% {
+		width: 130px;
+		margin-left: 15px;
+	}
+
+	30% {
+		width: 110px;
+		margin-left: 7.5px;
+	}
+
+	40% {
+		width: 100px;
+		margin-left: 0px;
+	}
+	50%{
+		width: 80px;
+	}
+	60%{
+		width: 60px;
+	}
+	70%{
+		width: 65px;
+	}
+	80%{
+		width: 70px;
+	}
+	90%{
+		width: 75px;
+	}
+
 }
