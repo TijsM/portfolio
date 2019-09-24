@@ -18,8 +18,10 @@
 <script src="https://www.vantajs.com/dist/vanta.waves.min.js"></script>
 
 
-<body>
+<body >
+    <div id="vantaBg">
 
+    </div>
     <header id="landing">
         <div class="screen" id="inner" data-tilt data-tilt-max=10 data-tilt-reverse="true"
             data-tilt-full-page-listening>
@@ -95,9 +97,8 @@
         </div>
     </header>
 
-    <section class="skills">
+    <section class="skills"  data-aos="fade-up">
         <h1>Skills and work</h1>
-
         <div class="skillContainer">
 
             <article class="aSkill cardContainer java" data-aos="fade-up">
@@ -309,7 +310,7 @@
 
     <script>
         VANTA.WAVES({
-            el: "#landing",
+            el: "#vantaBg",
             color: 0x1d1f21,
             waveHeight: 40,
             shininess: 42.00,
