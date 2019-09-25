@@ -11,7 +11,7 @@ lighter grey = 8C8C8C
 }
 
 body {
-  font-family: 'Actor', sans-serif;
+  font-family: "Actor", sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
@@ -32,7 +32,18 @@ body {
 h1 {
   color: white;
   font-size: 7em;
-  text-align: center;
+  text-align: left;
+  z-index: 4;
+  overflow: visible;
+}
+
+.outline {
+  height: 35px;
+  width: 600px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ffff00a6), color-stop(#ebff00a6), color-stop(#d7ff00a6), color-stop(#c1ff00a6), color-stop(#a9ff00a6), color-stop(#7bfc54a6), color-stop(#4cf67da6), color-stop(#00ef9da6), color-stop(#00dcd3a6), color-stop(#00c2ffa6), color-stop(#00a2ffa6), to(#0076ffa6));
+  background-image: linear-gradient(to right top, #ffff00a6, #ebff00a6, #d7ff00a6, #c1ff00a6, #a9ff00a6, #7bfc54a6, #4cf67da6, #00ef9da6, #00dcd3a6, #00c2ffa6, #00a2ffa6, #0076ffa6);
+  z-index: 0;
+  margin: -30px 500px 45px 0px;
 }
 
 strong {
@@ -62,7 +73,7 @@ strong {
 }
 
 .screen {
-  background-color: #464545;
+  background-color: #494944;
   max-width: 100%;
   width: 60%;
   height: 60%;
@@ -90,7 +101,7 @@ strong {
 }
 
 .windowHeadContainer {
-  background-color: #464545;
+  background-color: #494944;
   display: block;
   height: 45px;
   border-radius: 15px;
@@ -119,8 +130,7 @@ strong {
 .vp {
   width: 100%;
   height: 100%;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#064690), color-stop(#00569a), color-stop(#0064a2), color-stop(#0073a7), color-stop(#0081ac), color-stop(#008db1), color-stop(#0099b5), color-stop(#00a5b7), color-stop(#00b2b8), color-stop(#00beb3), color-stop(#00c9a9), to(#0cd499));
-  background-image: linear-gradient(to right top, #064690, #00569a, #0064a2, #0073a7, #0081ac, #008db1, #0099b5, #00a5b7, #00b2b8, #00beb3, #00c9a9, #0cd499);
+  background-image: #494944;
   /* border-radius: 15px; */
   border-radius: 0px 0px 15px 15px;
 }
@@ -249,9 +259,7 @@ strong {
 
 /* ********** SECTION SKILLS *******************************************/
 /* skills (section) -> twoSkills(div) -> aSkill (article) */
-.skills {
-  margin: 0px;
-  margin-top: 100px;
+section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,27 +272,24 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.skills h1 {
-  color: white;
-  font-weight: bolder;
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.skills {
-  -webkit-clip-path: polygon(20% 0, 50% 10%, 80% 0, 100% 0, 100% 90%, 80% 90%, 50% 100%, 20% 90%, 0% 90%, 0 0);
-          clip-path: polygon(20% 0, 50% 10%, 80% 0, 100% 0, 100% 90%, 80% 90%, 50% 100%, 20% 90%, 0% 90%, 0 0);
-  background-color: #464545;
+  -webkit-clip-path: polygon(10% 0, 50% 7.5%, 90% 0, 100% 0, 100% 92.5%, 90% 92.5%, 50% 100%, 10% 92.5%, 0% 92.5%, 0 0);
+          clip-path: polygon(10% 0, 50% 7.5%, 90% 0, 100% 0, 100% 92.5%, 90% 92.5%, 50% 100%, 10% 92.5%, 0% 92.5%, 0 0);
+  background-color: white;
   padding: 0px;
   margin: 0px;
   width: 100%;
   padding-top: 100px;
-  padding: 150px 100px 125px 100px;
+  padding: 150px 100px 175px 100px;
 }
 
-.skills .skillContainer {
+section h1 {
+  color: #494944;
+  font-weight: bolder;
+  text-align: left;
+  width: 80%;
+}
+
+section .skillContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -299,23 +304,21 @@ strong {
   max-width: 100%;
 }
 
-.skills .skillContainer .aSkill {
+section .skillContainer .aSkill {
   /* background-color: ; */
   width: 300px;
   height: 400px;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 0px 47px 5px rgba(0, 0, 0, 0.79);
-          box-shadow: 0px 0px 47px 5px rgba(0, 0, 0, 0.79);
   margin: 15px 50px 15px 50px;
   background-image: url("assets/react.png");
   background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #464545;
+  background-color: #494944;
   padding: 15px;
 }
 
-.skills .skillContainer .aSkill .overlay {
+section .skillContainer .aSkill .overlay {
   width: 100%;
   height: 100%;
   border-radius: 15px;
@@ -326,14 +329,14 @@ strong {
   -ms-grid-rows: 1fr 2fr 2fr 1fr;
       grid-template-rows: 1fr 2fr 2fr 1fr;
   background-image: none;
-  background-color: #464545ea;
+  background-color: #494944cb;
   color: white;
   opacity: 0;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
 
-.skills .skillContainer .aSkill .overlay .cardTitle {
+section .skillContainer .aSkill .overlay .cardTitle {
   font-size: 30px;
   line-height: 20px;
   padding-top: 30px;
@@ -345,7 +348,7 @@ strong {
   transition: all 2s;
 }
 
-.skills .skillContainer .aSkill .overlay .cardTitle hr {
+section .skillContainer .aSkill .overlay .cardTitle hr {
   display: block;
   width: 75px;
   margin-left: 0px;
@@ -358,7 +361,7 @@ strong {
   transition: all 5s;
 }
 
-.skills .skillContainer .aSkill .overlay .info {
+section .skillContainer .aSkill .overlay .info {
   font-size: 22px;
   line-height: 10px;
   font-weight: bold;
@@ -372,7 +375,7 @@ strong {
   margin-bottom: 75px;
 }
 
-.skills .skillContainer .aSkill .overlay .linkToProject {
+section .skillContainer .aSkill .overlay .linkToProject {
   font-size: 12px;
   opacity: 0;
   letter-spacing: 1px;
@@ -396,52 +399,52 @@ strong {
   bottom: 20px;
 }
 
-.skills .skillContainer .aSkill .overlay .linkToProject p {
+section .skillContainer .aSkill .overlay .linkToProject p {
   margin: 15px;
 }
 
-.skills .skillContainer .aSkill .overlay .linkToProject p,
-.skills .skillContainer .aSkill .overlay .linkToProject .icoContainer {
+section .skillContainer .aSkill .overlay .linkToProject p,
+section .skillContainer .aSkill .overlay .linkToProject .icoContainer {
   width: 100px;
   text-align: center;
   background-image: none;
 }
 
-.skills .skillContainer .aSkill .overlay .linkToProject p a,
-.skills .skillContainer .aSkill .overlay .linkToProject .icoContainer a {
+section .skillContainer .aSkill .overlay .linkToProject p a,
+section .skillContainer .aSkill .overlay .linkToProject .icoContainer a {
   color: white;
 }
 
-.skills .skillContainer .aSkill .overlay .linkToProject i {
+section .skillContainer .aSkill .overlay .linkToProject i {
   font-size: 35px;
 }
 
-.skills .skillContainer .aSkill h2 {
+section .skillContainer .aSkill h2 {
   font-size: 4em;
   color: white;
 }
 
-.skills .skillContainer :hover .overlay {
+section .skillContainer :hover .overlay {
   opacity: 1;
 }
 
-.skills .skillContainer :hover .overlay .cardTitle {
+section .skillContainer :hover .overlay .cardTitle {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
 
-.skills .skillContainer :hover .overlay hr {
+section .skillContainer :hover .overlay hr {
   width: 250px;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
 
-.skills .skillContainer :hover .overlay hr {
+section .skillContainer :hover .overlay hr {
   -webkit-animation: hrWidthAnimation 2s linear;
           animation: hrWidthAnimation 2s linear;
 }
 
-.skills .skillContainer :hover .overlay .info {
+section .skillContainer :hover .overlay .info {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   -webkit-transition-delay: 0.3s;
@@ -449,7 +452,7 @@ strong {
   opacity: 1;
 }
 
-.skills .skillContainer :hover .overlay .linkToProject {
+section .skillContainer :hover .overlay .linkToProject {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   -webkit-transition-delay: 0.5s;
@@ -457,27 +460,27 @@ strong {
   opacity: 1;
 }
 
-.skills .skillContainer :nth-child(1) {
+section .skillContainer :nth-child(1) {
   background-image: url("assets/java.png");
 }
 
-.skills .skillContainer :nth-child(2) {
+section .skillContainer :nth-child(2) {
   background-image: url("assets/sql.png");
 }
 
-.skills .skillContainer :nth-child(3) {
+section .skillContainer :nth-child(3) {
   background-image: url("assets/JavaScript.png");
 }
 
-.skills .skillContainer :nth-child(4) {
+section .skillContainer :nth-child(4) {
   background-image: url("assets/cSharp.png");
 }
 
-.skills .skillContainer :nth-child(5) {
+section .skillContainer :nth-child(5) {
   background-image: url("assets/angular.png");
 }
 
-.skills .skillContainer :nth-child(6) {
+section .skillContainer :nth-child(6) {
   background-image: url("assets/php.png");
 }
 
@@ -503,20 +506,11 @@ strong {
 }
 
 /* ********** SECTION CONTACT *******************************************/
-.contact {
-  margin-top: 0px;
-  background-color: #464545;
-  -webkit-clip-path: polygon(20% 0, 50% 10%, 80% 0, 100% 0, 100% 90%, 80% 90%, 50% 100%, 20% 90%, 0% 90%, 0 0);
-          clip-path: polygon(20% 0, 50% 10%, 80% 0, 100% 0, 100% 90%, 80% 90%, 50% 100%, 20% 90%, 0% 90%, 0 0);
-  padding-top: 100px;
-  margin-top: 30px;
-  padding-bottom: 75px;
-}
-
 .contact h1 {
-  padding: 50px;
-  color: white;
-  font-size: 4em;
+  font-weight: bolder;
+  text-align: left;
+  width: 80%;
+  color: #494944;
 }
 
 form {
@@ -540,7 +534,7 @@ input,
   margin: 20px;
   padding-left: 25px;
   height: 50px;
-  border: #464545 solid 2px;
+  border: #494944 solid 2px;
   border-radius: 15px;
 }
 
@@ -558,19 +552,19 @@ input,
           box-sizing: border-box;
   font-weight: bolder;
   font-size: 2em;
-  color: white;
+  color: #494944;
 }
 
 .button {
   padding: 1em 3em;
-  border: 0.16em solid #464545;
+  border: 0.16em solid #494944;
   margin: 0 0.3em 0.3em 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #464545;
+  color: #494944;
   text-align: center;
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
@@ -580,8 +574,8 @@ input,
 /* ********** SECTION FOOTER *******************************************/
 footer {
   /* https://bennettfeely.com/clippy/ */
-  padding: 100px;
-  margin-top: 50px;
+  padding: 35px;
+  margin-top: 0px;
 }
 
 .footerContainer {
@@ -651,16 +645,17 @@ footer h1 {
     border-radius: 25px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-box-shadow: 0px 0px 100px 1.5px rgba(255, 255, 255, 0.75);
-            box-shadow: 0px 0px 100px 1.5px rgba(255, 255, 255, 0.75);
+    background-color: black;
+    -webkit-box-shadow: 0px 0px 100px 1.5px white;
+            box-shadow: 0px 0px 100px 1.5px white;
   }
   .deviceScreen {
     width: 100%;
     height: 95%;
     padding-top: 25px;
     margin: 15px;
-    background: #958e91;
-    background: radial-gradient(circle, #958e91 0%, #242526 100%);
+    background: -webkit-gradient(linear, left bottom, right top, from(#ffff00a6), color-stop(#ebff00a6), color-stop(#d7ff00a6), color-stop(#c1ff00a6), color-stop(#a9ff00a6), color-stop(#7bfc54a6), color-stop(#4cf67da6), color-stop(#00ef9da6), color-stop(#00dcd3a6), color-stop(#00c2ffa6), color-stop(#00a2ffa6), to(#0076ffa6));
+    background: linear-gradient(to right top, #ffff00a6, #ebff00a6, #d7ff00a6, #c1ff00a6, #a9ff00a6, #7bfc54a6, #4cf67da6, #00ef9da6, #00dcd3a6, #00c2ffa6, #00a2ffa6, #0076ffa6);
     /* background-color: $darkGrey; */
     border-radius: 25px;
     -webkit-box-sizing: border-box;
@@ -681,6 +676,7 @@ footer h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    color: white;
   }
   .nodge {
     background-color: black;
@@ -770,6 +766,20 @@ footer h1 {
   /* ********** FUTURE - MOBILE *******************************************************************/
   /* ********** CONTACT - MOBILE *******************************************************************/
   /* ********** FOOTER - MOBILE *******************************************************************/
+}
+
+@media screen and (max-width: 850px) {
+  section {
+    -webkit-clip-path: polygon(0% 0, 50% 5%, 100% 0, 100% 0, 100% 95%, 100% 95%, 50% 100%, 0% 95%, 0% 95%, 0 0);
+            clip-path: polygon(0% 0, 50% 5%, 100% 0, 100% 0, 100% 95%, 100% 95%, 50% 100%, 0% 95%, 0% 95%, 0 0);
+  }
+  .skills {
+    padding-top: 250px;
+  }
+  section h1,
+  .contact h1 {
+    font-size: 4em;
+  }
 }
 
 @-webkit-keyframes hrWidthAnimation {

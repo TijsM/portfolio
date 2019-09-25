@@ -1,10 +1,9 @@
 /* **********  GENERAL *******************************************/
 
 $bg: #fef5df;
-$darkGrey: #464545;
-$darkGreyVague: #464545ea;
-
-
+$darkGrey: #494944;
+$darkGreyVague: #494944cb;
+$gradient: linear-gradient(to right top, #ffff00a6, #ebff00a6, #d7ff00a6, #c1ff00a6, #a9ff00a6, #7bfc54a6, #4cf67da6, #00ef9da6, #00dcd3a6, #00c2ffa6, #00a2ffa6, #0076ffa6);
 
 /* 
 dark grey = 464545
@@ -18,23 +17,19 @@ lighter grey = 8C8C8C
 }
 
 body {
-	font-family: 'Actor', sans-serif;
+	font-family: "Actor", sans-serif;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	// background-position-x: 100vh;
 	background-size: contain;
-	
 }
 
-#vantaBg[style]{
+#vantaBg[style] {
 	height: 50% !important;
 	position: fixed !important;
 	height: 100vh !important;
 	width: 100vw !important;
 	z-index: -5 !important;
-	// .vanta-canvas[style]{
-	// 	width: 15px !important;
-	// }
 }
 
 .hide {
@@ -44,7 +39,17 @@ body {
 h1 {
 	color: white;
 	font-size: 7em;
-	text-align: center;
+	text-align: left;
+	z-index: 4;
+	overflow: visible;
+}
+
+.outline {
+	height: 35px;
+	width: 600px;
+	background-image: $gradient;
+	z-index: 0;
+	margin: -30px 500px 45px 0px;
 }
 
 strong {
@@ -111,7 +116,7 @@ strong {
 .vp {
 	width: 100%;
 	height: 100%;
-	background-image: linear-gradient(to right top, #064690, #00569a, #0064a2, #0073a7, #0081ac, #008db1, #0099b5, #00a5b7, #00b2b8, #00beb3, #00c9a9, #0cd499);
+	background-image: $darkGrey;
 	/* border-radius: 15px; */
 	border-radius: 0px 0px 15px 15px;
 
@@ -211,213 +216,209 @@ strong {
 
 /* skills (section) -> twoSkills(div) -> aSkill (article) */
 
-.skills {
-	margin: 0px;
-	margin-top: 100px;
+section {
 	display: flex;
 	flex-direction: column;
 	width: 80%;
 	margin-left: 10%;
 	align-items: center;
-
-	h1 {
-		color:white;;
-		font-weight: bolder;
-		text-align: center;
-		
-		margin-bottom: 35px;
-	}
-}
-
-.skills{
-	clip-path: polygon(20% 0, 50% 10%, 80% 0, 100% 0, 100% 90%, 80% 90%, 50% 100%, 20% 90%, 0% 90%, 0 0);
-	background-color: $darkGrey;
+	clip-path: polygon(10% 0, 50% 7.5%, 90% 0, 100% 0, 100% 92.5%, 90% 92.5%, 50% 100%, 10% 92.5%, 0% 92.5%, 0 0);
+	background-color: white;
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
 	padding-top: 100px;
-	padding: 150px 100px 125px 100px;
+	padding: 150px 100px 175px 100px;
 
+	h1 {
+		color: $darkGrey;
+		font-weight: bolder;
+		text-align: left;
+		width: 80%;
+		// margin-bottom: 35px;
+	}
+	.skillContainer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		max-width: 100%;
 
-.skillContainer {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	max-width: 100%;
-
-	.aSkill {
-		/* background-color: ; */
-		width: 300px;
-		height:  400px;
-		border-radius: 15px;
-		box-shadow: 0px 0px 47px 5px rgba(0,0,0,0.79);
-		margin: 15px 50px 15px 50px;
-
-		// margin-left: 45px;
-		// margin-right: 45px;
-		// perspective: 1000px;
-		// margin-top: 8px;
-
-
-		
-		background-image: url("assets/react.png");
-		
-		background-size: 40%;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-color: $darkGrey;
-
-		padding: 15px;
-		
-
-		.overlay {
-			width: 100%;
-			height: 100%;
-		
+		.aSkill {
+			/* background-color: ; */
+			width: 300px;
+			height: 400px;
 			border-radius: 15px;
-		
-			display: grid;
-			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 2fr 2fr 1fr;
-		
-			background-image: none;
-			background-color:$darkGreyVague;
-			
-			// color: $bg;
-			color: white;
-			opacity: 0;
-			transition: all 0.8s;
-		
-			// font-family: "Playfair Display", serif;
+			// box-shadow: 0px 0px 47px 5px rgba(0, 0, 0, 0.79);
+			// border: 1px solid black;
+			margin: 15px 50px 15px 50px;
 
-			.cardTitle {
-				font-size: 30px;
-				line-height: 20px;
-				padding-top: 30px;
-				padding-bottom: 35px;
-				margin-bottom: 35px;
-			
-				transform: translateY(40px);
-				// moving head up
-				transition: all 2s;
+			// margin-left: 45px;
+			// margin-right: 45px;
+			// perspective: 1000px;
+			// margin-top: 8px;
 
-				hr {
-					display: block;
-					width: 75px;
-			
-					margin-left: 0px;	
+			background-image: url("assets/react.png");
 
-					border: none;
-					border-bottom: solid 2px $bg;
-			
-					position: absolute;
-					bottom: 0;
-					left: 20px;
-			
-					transition: all 5s;
-				}
-			}
+			background-size: 40%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: $darkGrey;
 
-			.info {
-				font-size: 22px;
-				line-height: 10px;
-				font-weight: bold;
-				line-height: 1.2em;
-				opacity: 0;
-				transform: translateY(40px);
-				transition: all 0.7s;
+			padding: 15px;
+
+			.overlay {
+				width: 100%;
+				height: 100%;
+
+				border-radius: 15px;
+
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr 2fr 2fr 1fr;
+
 				background-image: none;
-				margin-bottom: 75px;
-			}
-			
-			.linkToProject {
-				font-size: 12px;
-				opacity: 0;
-				letter-spacing: 1px;
-				font-family: "Lato", sans-serif;
-				transform: translateY(60px);
-				transition: all 0.7s;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				background-image: none;
-				position: relative;
-				bottom: 20px;
-				p{
-					margin: 15px;
-				}
-				p,
-				.icoContainer {
-					width: 100px;
-					text-align: center;
-					background-image: none;
+				background-color: $darkGreyVague;
 
-					a{
-						color: white;
+				// color: $bg;
+				color: white;
+				opacity: 0;
+				transition: all 0.8s;
+
+				// font-family: "Playfair Display", serif;
+
+				.cardTitle {
+					font-size: 30px;
+					line-height: 20px;
+					padding-top: 30px;
+					padding-bottom: 35px;
+					margin-bottom: 35px;
+
+					transform: translateY(40px);
+					// moving head up
+					transition: all 2s;
+
+					hr {
+						display: block;
+						width: 75px;
+
+						margin-left: 0px;
+
+						border: none;
+						border-bottom: solid 2px $bg;
+
+						position: absolute;
+						bottom: 0;
+						left: 20px;
+
+						transition: all 5s;
 					}
 				}
-			
-				i {
-					font-size: 35px;
+
+				.info {
+					font-size: 22px;
+					line-height: 10px;
+					font-weight: bold;
+					line-height: 1.2em;
+					opacity: 0;
+					transform: translateY(40px);
+					transition: all 0.7s;
+					background-image: none;
+					margin-bottom: 75px;
+				}
+
+				.linkToProject {
+					font-size: 12px;
+					opacity: 0;
+					letter-spacing: 1px;
+					font-family: "Lato", sans-serif;
+					transform: translateY(60px);
+					transition: all 0.7s;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					background-image: none;
+					position: relative;
+					bottom: 20px;
+					p {
+						margin: 15px;
+					}
+					p,
+					.icoContainer {
+						width: 100px;
+						text-align: center;
+						background-image: none;
+
+						a {
+							color: white;
+						}
+					}
+
+					i {
+						font-size: 35px;
+					}
 				}
 			}
+			h2 {
+				font-size: 4em;
+				color: white;
+			}
 		}
-		h2 {
-			font-size: 4em;
-			color: white;
-		}
-	}
 
-	:hover .overlay {
-		opacity: 1;
-		& .cardTitle {
-			transform: translateY(0px);
-		}
-	
-		& hr {
-			width: 250px;
-			transition-delay: 0.1s;
-		}
-	
-		& hr {
-			animation: hrWidthAnimation 2s linear;
-			// width: 100px;
-		}
-	
-		& .info {
-			transform: translateY(0px);
-			transition-delay: 0.3s;
-			opacity: 1;
-		}
-	
-		& .linkToProject {
-			transform: translateY(0px);
-			transition-delay: 0.5s;
-			opacity: 1;
-		}
-	}
+		// & :hover{
+		// 	box-shadow: 0px 0px 47px 5px rgba(0, 0, 0, 0.79);
+		// 	transform: scale(1.1);
 
-	:nth-child(1){
-		background-image: url("assets/java.png");
+		// }
+
+		:hover .overlay {
+			opacity: 1;
+			& .cardTitle {
+				transform: translateY(0px);
+			}
+
+			& hr {
+				width: 250px;
+				transition-delay: 0.1s;
+			}
+
+			& hr {
+				animation: hrWidthAnimation 2s linear;
+				// width: 100px;
+			}
+
+			& .info {
+				transform: translateY(0px);
+				transition-delay: 0.3s;
+				opacity: 1;
+			}
+
+			& .linkToProject {
+				transform: translateY(0px);
+				transition-delay: 0.5s;
+				opacity: 1;
+			}
+		}
+
+		:nth-child(1) {
+			background-image: url("assets/java.png");
+		}
+		:nth-child(2) {
+			background-image: url("assets/sql.png");
+		}
+		:nth-child(3) {
+			background-image: url("assets/JavaScript.png");
+		}
+		:nth-child(4) {
+			background-image: url("assets/cSharp.png");
+		}
+		:nth-child(5) {
+			background-image: url("assets/angular.png");
+		}
+		:nth-child(6) {
+			background-image: url("assets/php.png");
+		}
 	}
-	:nth-child(2){
-		background-image: url("assets/sql.png");
-	}
-	:nth-child(3){
-		background-image: url("assets/JavaScript.png");
-	}
-	:nth-child(4){
-		background-image: url("assets/cSharp.png");
-	}
-	:nth-child(5){
-		background-image: url("assets/angular.png");
-	}
-	:nth-child(6){
-		background-image: url("assets/php.png");
-	}
-	
-}
 }
 
 /* ********** SECTION FUTURE *******************************************/
@@ -433,7 +434,7 @@ strong {
 	padding-bottom: 0px;
 	clip-path: none;
 
-	.aSkill{
+	.aSkill {
 		height: 200px;
 	}
 
@@ -444,22 +445,13 @@ strong {
 
 /* ********** SECTION CONTACT *******************************************/
 
-
-
 .contact {
-	margin-top: 0px;
-	background-color: $darkGrey;
-	clip-path: polygon(20% 0, 50% 10%, 80% 0, 100% 0, 100% 90%, 80% 90%, 50% 100%, 20% 90%, 0% 90%, 0 0);
-	padding-top: 100px;
-	margin-top: 30px;
-	padding-bottom: 75px;
-}
-
-.contact h1 {
-	
-	padding: 50px;
-	color: white;
-	font-size: 4em;
+	h1 {
+		font-weight: bolder;
+		text-align: left;
+		width: 80%;
+		color: $darkGrey;
+	}
 }
 
 form {
@@ -478,7 +470,6 @@ input,
 	height: 50px;
 	border: $darkGrey solid 2px;
 	border-radius: 15px;
-	
 }
 
 .textArea {
@@ -494,7 +485,7 @@ input,
 	box-sizing: border-box;
 	font-weight: bolder;
 	font-size: 2em;
-	color: white;
+	color: $darkGrey;
 }
 
 .button {
@@ -517,8 +508,8 @@ footer {
 	// background-color: $darkGrey;
 	// clip-path: polygon(0 0, 10% 0, 48% 24%, 90% 0, 100% 0, 100% 100%, 0 100%);
 	/* https://bennettfeely.com/clippy/ */
-	padding: 100px;
-	margin-top: 50px;
+	padding: 35px;
+	margin-top: 0px;
 }
 
 .footerContainer {
@@ -576,7 +567,8 @@ footer h1 {
 		height: 526px;
 		border-radius: 25px;
 		box-sizing: border-box;
-		box-shadow: 0px 0px 100px 1.5px rgba(255, 255, 255, 0.75);
+		background-color: black;
+		box-shadow: 0px 0px 100px 1.5px rgba(255, 255, 255, 1);
 	}
 
 	.deviceScreen {
@@ -584,8 +576,9 @@ footer h1 {
 		height: 95%;
 		padding-top: 25px;
 		margin: 15px;
-		background: rgb(149, 142, 145);
-		background: radial-gradient(circle, rgba(149, 142, 145, 1) 0%, rgba(36, 37, 38, 1) 100%);
+		// background: rgb(149, 142, 145);
+		// background: radial-gradient(circle, rgba(149, 142, 145, 1) 0%, rgba(36, 37, 38, 1) 100%);
+		background: $gradient;
 		/* background-color: $darkGrey; */
 		border-radius: 25px;
 		box-sizing: border-box;
@@ -595,6 +588,7 @@ footer h1 {
 		justify-content: center;
 		align-content: center;
 		align-items: center;
+		color: white;
 	}
 
 	.nodge {
@@ -677,6 +671,19 @@ footer h1 {
 	/* ********** FOOTER - MOBILE *******************************************************************/
 }
 
+@media screen and (max-width: 850px) {
+	section {
+		clip-path: polygon(0% 0, 50% 5%, 100% 0, 100% 0, 100% 95%, 100% 95%, 50% 100%, 0% 95%, 0% 95%, 0 0);
+	}
+
+	.skills {
+		padding-top: 250px;
+	}
+	section h1,
+	.contact h1 {
+		font-size: 4em;
+	}
+}
 
 @keyframes hrWidthAnimation {
 	0% {
@@ -702,20 +709,19 @@ footer h1 {
 		width: 100px;
 		margin-left: 0px;
 	}
-	50%{
+	50% {
 		width: 80px;
 	}
-	60%{
+	60% {
 		width: 60px;
 	}
-	70%{
+	70% {
 		width: 65px;
 	}
-	80%{
+	80% {
 		width: 70px;
 	}
-	90%{
+	90% {
 		width: 75px;
 	}
-
 }
