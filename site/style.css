@@ -327,6 +327,36 @@ strong {
   width: 60%;
 }
 
+/* ********** SECTION INFO *******************************************/
+#info .cardContainer .card:nth-child(1) {
+  background-image: url("./assets/html.png");
+}
+
+#info .cardContainer .card:nth-child(2) {
+  background-image: url("./assets/google.png");
+}
+
+#info .cardContainer {
+  width: 90%;
+}
+
+#info .cardContainer .card {
+  width: 40%;
+  margin: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 400px;
+}
+
+#info .cardContainer .card .overlay {
+  padding: 20px;
+}
+
+#info .cardContainer .card .info {
+  font-weight: 300;
+  padding-top: 15px;
+}
+
 /* ********** SECTION SKILLS *******************************************/
 /* skills (section) -> twoSkills(div) -> aSkill (article) */
 section {
@@ -359,7 +389,7 @@ section h1 {
   width: 80%;
 }
 
-section .skillContainer {
+section .cardContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,15 +404,14 @@ section .skillContainer {
   max-width: 100%;
 }
 
-section .skillContainer .aSkill {
-  /* background-color: ; */
+section .cardContainer .card {
   width: 300px;
   height: 300px;
   border-radius: 15px;
   opacity: 1;
   margin: 15px 50px 15px 50px;
   background-image: url("assets/react.png");
-  background-size: 40%;
+  background-size: 20%;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #494944;
@@ -390,7 +419,7 @@ section .skillContainer .aSkill {
   z-index: 2;
 }
 
-section .skillContainer .aSkill .overlay {
+section .cardContainer .card .overlay {
   width: 100%;
   height: 100%;
   border-radius: 15px;
@@ -409,7 +438,7 @@ section .skillContainer .aSkill .overlay {
   z-index: 2;
 }
 
-section .skillContainer .aSkill .overlay .cardTitle {
+section .cardContainer .card .overlay .cardTitle {
   font-size: 30px;
   line-height: 10px;
   padding-top: 7.5px;
@@ -421,7 +450,7 @@ section .skillContainer .aSkill .overlay .cardTitle {
   transition: all 2s;
 }
 
-section .skillContainer .aSkill .overlay .cardTitle hr {
+section .cardContainer .card .overlay .cardTitle hr {
   display: block;
   width: 75px;
   margin-left: 0px;
@@ -434,7 +463,7 @@ section .skillContainer .aSkill .overlay .cardTitle hr {
   transition: all 5s;
 }
 
-section .skillContainer .aSkill .overlay .info {
+section .cardContainer .card .overlay .info {
   font-size: 22px;
   line-height: 10px;
   font-weight: bold;
@@ -448,7 +477,7 @@ section .skillContainer .aSkill .overlay .info {
   margin-bottom: 75px;
 }
 
-section .skillContainer .aSkill .overlay .linkToProject {
+section .cardContainer .card .overlay .linkToProject {
   font-size: 12px;
   opacity: 0;
   letter-spacing: 1px;
@@ -472,52 +501,52 @@ section .skillContainer .aSkill .overlay .linkToProject {
   bottom: 40px;
 }
 
-section .skillContainer .aSkill .overlay .linkToProject p {
+section .cardContainer .card .overlay .linkToProject p {
   margin: 15px;
 }
 
-section .skillContainer .aSkill .overlay .linkToProject p,
-section .skillContainer .aSkill .overlay .linkToProject .icoContainer {
+section .cardContainer .card .overlay .linkToProject p,
+section .cardContainer .card .overlay .linkToProject .icoContainer {
   width: 100px;
   text-align: center;
   background-image: none;
 }
 
-section .skillContainer .aSkill .overlay .linkToProject p a,
-section .skillContainer .aSkill .overlay .linkToProject .icoContainer a {
+section .cardContainer .card .overlay .linkToProject p a,
+section .cardContainer .card .overlay .linkToProject .icoContainer a {
   color: white;
 }
 
-section .skillContainer .aSkill .overlay .linkToProject i {
+section .cardContainer .card .overlay .linkToProject i {
   font-size: 35px;
 }
 
-section .skillContainer .aSkill h2 {
+section .cardContainer .card h2 {
   font-size: 4em;
   color: white;
 }
 
-section .skillContainer :hover .overlay {
+section .cardContainer :hover .overlay {
   opacity: 1;
 }
 
-section .skillContainer :hover .overlay .cardTitle {
+section .cardContainer :hover .overlay .cardTitle {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
 
-section .skillContainer :hover .overlay hr {
+section .cardContainer :hover .overlay hr {
   width: 250px;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
 
-section .skillContainer :hover .overlay hr {
+section .cardContainer :hover .overlay hr {
   -webkit-animation: hrWidthAnimation 2s linear;
           animation: hrWidthAnimation 2s linear;
 }
 
-section .skillContainer :hover .overlay .info {
+section .cardContainer :hover .overlay .info {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   -webkit-transition-delay: 0.3s;
@@ -525,7 +554,7 @@ section .skillContainer :hover .overlay .info {
   opacity: 1;
 }
 
-section .skillContainer :hover .overlay .linkToProject {
+section .cardContainer :hover .overlay .linkToProject {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   -webkit-transition-delay: 0.5s;
@@ -533,27 +562,27 @@ section .skillContainer :hover .overlay .linkToProject {
   opacity: 1;
 }
 
-section .skillContainer :nth-child(1) {
+section .cardContainer :nth-child(1) {
   background-image: url("assets/java.png");
 }
 
-section .skillContainer :nth-child(2) {
+section .cardContainer :nth-child(2) {
   background-image: url("assets/sql.png");
 }
 
-section .skillContainer :nth-child(3) {
+section .cardContainer :nth-child(3) {
   background-image: url("assets/JavaScript.png");
 }
 
-section .skillContainer :nth-child(4) {
+section .cardContainer :nth-child(4) {
   background-image: url("assets/cSharp.png");
 }
 
-section .skillContainer :nth-child(5) {
+section .cardContainer :nth-child(5) {
   background-image: url("assets/angular.png");
 }
 
-section .skillContainer :nth-child(6) {
+section .cardContainer :nth-child(6) {
   background-image: url("assets/php.png");
 }
 
@@ -570,7 +599,7 @@ section .skillContainer :nth-child(6) {
           clip-path: none;
 }
 
-.futureSkills .aSkill {
+.futureSkills .card {
   height: 200px;
 }
 
@@ -578,15 +607,15 @@ section .skillContainer :nth-child(6) {
   color: white;
 }
 
-.futureSkills .skillContainer .aSkill:nth-child(1) {
+.futureSkills .cardContainer .card:nth-child(1) {
   background-image: url("assets/react.png");
 }
 
-.futureSkills .skillContainer .aSkill:nth-child(2) {
+.futureSkills .cardContainer .card:nth-child(2) {
   background-image: url("assets/react-native-logo.png");
 }
 
-.futureSkills .skillContainer .aSkill:nth-child(3) {
+.futureSkills .cardContainer .card:nth-child(3) {
   background-image: url("assets/node.png");
 }
 
@@ -870,7 +899,7 @@ footer h1 {
             flex-direction: column;
     margin: 0px;
   }
-  .aSkill {
+  .card {
     margin: 25px 0px 0px 0px !important;
   }
   /* ********** FUTURE - MOBILE *******************************************************************/

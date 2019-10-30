@@ -36,7 +36,7 @@ body {
 .hide {
 	opacity: 0;
 }
-a :active{
+a :active {
 	outline: none;
 }
 
@@ -65,8 +65,8 @@ strong {
 	display: none;
 }
 
-#buttonToTopContainer{
-	box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.75);
+#buttonToTopContainer {
+	box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.75);
 	background-color: white;
 	position: fixed;
 	bottom: 50px;
@@ -77,11 +77,10 @@ strong {
 	border-radius: 100%;
 	text-align: center;
 
-	i{
-		margin-top:10px;
+	i {
+		margin-top: 10px;
 		font-size: 3em;
 		color: black;
-
 	}
 }
 /* ********** HEADER *******************************************/
@@ -157,7 +156,7 @@ strong {
 		flex-direction: row;
 		align-items: center;
 
-		.searchBar{
+		.searchBar {
 			background-color: transparent;
 			margin: 0px;
 			padding: 0px;
@@ -214,27 +213,25 @@ strong {
 		transform: translateZ(40px);
 		// box-shadow: 0px 0px 25px 1px rgba(255, 255, 255, 0.1);
 
-		h1{
+		h1 {
 			font-size: 2em;
-
 		}
-		.outline{
+		.outline {
 			width: 80%;
 		}
 
 		.intro {
 			font-size: 2.5em;
 		}
-		p{
+		p {
 			font-style: italic;
 		}
-
 	}
 
 	.linksContainter {
 		width: 60%;
 		margin: auto;
-		margin-top:	30px;
+		margin-top: 30px;
 		padding-right: 80%;
 		display: flex;
 		// flex-direction: column;
@@ -265,16 +262,47 @@ strong {
 	}
 }
 
-.downContainer{
+.downContainer {
 	display: flex;
 	justify-content: center;
 	width: 100%;
 
-	img{
+	img {
 		margin-left: 20%;
 		width: 60%;
 	}
 }
+
+/* ********** SECTION INFO *******************************************/
+
+#info{
+	.cardContainer .card:nth-child(1) {
+		background-image: url("./assets/html.png");
+	}
+	.cardContainer .card:nth-child(2) {
+		background-image: url("./assets/google.png");
+	}
+
+	.cardContainer{
+		width: 90%;;
+		.card{
+			width: 40%;
+			margin: 5%;
+			box-sizing: border-box;
+			height: 400px;
+
+			.overlay{
+				padding: 20px;	
+			}
+			.info{
+				font-weight: 300;
+				padding-top: 15px;
+			}
+		}
+	}
+}
+	
+
 
 /* ********** SECTION SKILLS *******************************************/
 
@@ -301,59 +329,35 @@ section {
 		width: 80%;
 		// margin-bottom: 35px;
 	}
-	.skillContainer {
+	.cardContainer {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-around;
 		max-width: 100%;
 
-
-
-		.aSkill {
-			/* background-color: ; */
+		.card {
 			width: 300px;
 			height: 300px;
 			border-radius: 15px;
 			opacity: 1;
-			// box-shadow: 0px 0px 47px 5px rgba(0, 0, 0, 0.79);
-			// border: 1px solid black;
 			margin: 15px 50px 15px 50px;
-			// margin-left: 25px;
-
-			// margin-left: 45px;
-			// margin-right: 45px;
-			// perspective: 1000px;
-			// margin-top: 8px;
-
 			background-image: url("assets/react.png");
-
-			background-size: 40%;
+			background-size: 20%;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-color: $darkGrey;
-
 			padding: 15px;
-
 			z-index: 2;
-
-
-
-
 			.overlay {
 				width: 100%;
 				height: 100%;
-
 				border-radius: 15px;
-
 				display: grid;
 				grid-template-columns: 1fr;
 				grid-template-rows: 1fr 2fr 2fr 1fr;
-
 				background-image: none;
 				background-color: $darkGreyVague;
-
-				// color: $bg;
 				color: white;
 				opacity: 0;
 				transition: all 0.8s;
@@ -364,7 +368,7 @@ section {
 				.cardTitle {
 					font-size: 30px;
 					line-height: 10px;
-					padding-top:7.5px;
+					padding-top: 7.5px;
 					padding-bottom: 20px;
 					margin-bottom: 15px;
 
@@ -375,16 +379,12 @@ section {
 					hr {
 						display: block;
 						width: 75px;
-
 						margin-left: 0px;
-
 						border: none;
 						border-bottom: solid 2px $bg;
-
 						position: absolute;
 						bottom: 0;
 						left: 20px;
-
 						transition: all 5s;
 					}
 				}
@@ -422,48 +422,21 @@ section {
 						width: 100px;
 						text-align: center;
 						background-image: none;
-
 						a {
 							color: white;
 						}
 					}
-
 					i {
 						font-size: 35px;
 					}
 				}
 			}
 
-			// .border{
-			// 	width: 350px;
-			// 	height: 400px;
-			// 	background-image:none;
-			// 	background: red;
-			// 	border-radius: 15px;
-			// 	position: absolute;
-			// 	top: 0px;
-			// 	left: 0px;
-			// 	z-index: -100;
-
-			// 	display: flex;
-			// 	justify-content: center;
-			// 	transition: all 0.8s;
-			// }
-
 			h2 {
 				font-size: 4em;
 				color: white;
 			}
 		}
-
-
-
-		// & :hover{
-		// 	box-shadow: 0px 0px 47px 5px rgba(0, 0, 0, 0.79);
-		// 	transform: scale(1.1);
-
-		// }
-
 		:hover .overlay {
 			opacity: 1;
 			& .cardTitle {
@@ -477,7 +450,6 @@ section {
 
 			& hr {
 				animation: hrWidthAnimation 2s linear;
-				// width: 100px;
 			}
 
 			& .info {
@@ -491,16 +463,9 @@ section {
 				transition-delay: 0.5s;
 				opacity: 1;
 			}
-
-
 		}
 
-
-
-
-
-
-		& :nth-child(1){
+		& :nth-child(1) {
 			background-image: url("assets/java.png");
 		}
 		& :nth-child(2) {
@@ -518,35 +483,7 @@ section {
 		& :nth-child(6) {
 			background-image: url("assets/php.png");
 		}
-
-		// :hover::after{
-		// 	content: "";
-		// 	position: absolute;
-		// 	z-index: -1;
-		// 	bottom: -10px;
-		// 	left: 5%;
-		// 	height: 110%;
-		// 	width: 90%;
-		// 	opacity: 0.8;
-		// 	border-radius: 15px;
-
-
-		// 	background: inherit;
-		// 	filter: blur(6px);
-		// 	transition:  all 0.2s;
-
-
-		// 	background: $gradient;
-
-		// 	// // filter: blur(4px);
-
-		// 	// width: 100%;
-		// 	// bottom: -5px;
-		// 	// left: 0;
-		// }
 	}
-
-
 }
 
 /* ********** SECTION FUTURE *******************************************/
@@ -562,9 +499,7 @@ section {
 	padding-bottom: 0px;
 	clip-path: none;
 
-	
-
-	.aSkill {
+	.card {
 		height: 200px;
 	}
 
@@ -572,22 +507,17 @@ section {
 		color: white;
 	}
 
-	.skillContainer .aSkill:nth-child(1){
+	.cardContainer .card:nth-child(1) {
 		background-image: url("assets/react.png");
 	}
-	
-	.skillContainer .aSkill:nth-child(2){
+
+	.cardContainer .card:nth-child(2) {
 		background-image: url("assets/react-native-logo.png");
-	
 	}
-	.skillContainer .aSkill:nth-child(3){
+	.cardContainer .card:nth-child(3) {
 		background-image: url("assets/node.png");
 	}
-	
-	
 }
-
-
 
 /* ********** SECTION CONTACT *******************************************/
 
@@ -649,12 +579,12 @@ input,
 	background-color: white;
 }
 
-.button:hover{
+.button:hover {
 	color: white;
 	background-color: $darkGrey;
 }
 
-#mailConfirmation{
+#mailConfirmation {
 	display: none;
 	background-color: rgb(125, 224, 125);
 	position: fixed;
@@ -666,7 +596,6 @@ input,
 	color: white;
 	text-align: center;
 	margin-left: 12.5%;
-
 }
 
 /* ********** SECTION FOOTER *******************************************/
@@ -792,21 +721,17 @@ footer h1 {
 		margin-left: 20px;
 		box-sizing: border-box;
 
-		h1{
+		h1 {
 			margin-top: 40px;
 			font-size: 3em;
 		}
 
-		.outline{
-
+		.outline {
 			width: 75%;
 			margin-right: 10px;
 			margin-left: 10px;
 		}
 	}
-
-
-
 
 	.links_containter {
 		height: 15%;
@@ -841,7 +766,7 @@ footer h1 {
 		flex-direction: column;
 		margin: 0px;
 	}
-	.aSkill {
+	.card {
 		margin: 25px 0px 0px 0px !important;
 	}
 	/* ********** FUTURE - MOBILE *******************************************************************/
@@ -859,59 +784,54 @@ footer h1 {
 		width: 100%;
 	}
 
-
-
 	section h1,
 	#contact h1 {
 		font-size: 2em;
 	}
 
-	#contact{
+	#contact {
 		width: 100%;
-		padding-left:0px;
+		padding-left: 0px;
 		padding-right: 0px;
 		margin-left: 0px;
 		margin-right: 0px;
 	}
 
-	textarea{
+	textarea {
 		margin: 0px;
 		padding: 0px;
 		width: 60%;
 	}
 
-	.outline{
-
+	.outline {
 		margin-top: -15px;
 	}
 
-	footer h1{
+	footer h1 {
 		font-size: 2em;
 		text-align: center;
 	}
 
 	.linkedIn i,
-.github i {
+	.github i {
+		opacity: 0.85;
+		color: white;
+		text-align: center;
+		font-size: 3em;
+		text-decoration: none;
+	}
 
-	opacity: 0.85;
-	color: white;
-	text-align: center;
-	font-size: 3em;
-	text-decoration: none;
-}
-
-	#buttonToTopContainer{
+	#buttonToTopContainer {
 		right: 10px;
 		bottom: 10px;
 		width: 45px;
 		height: 45px;
 
-		i{
+		i {
 			font-size: 2em;
 			margin-top: 5px;
 		}
 	}
-
 }
 
 @keyframes hrWidthAnimation {
