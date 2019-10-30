@@ -17,8 +17,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
 <script src="https://www.vantajs.com/dist/vanta.waves.min.js"></script>
 
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("user_24HpkEdYI2bCtwxzDUnSk");
+    })();
+</script>
+<script src="send-mail.js"></script>
 
-<body >
+<body>
     <div id="vantaBg">
 
     </div>
@@ -43,27 +50,25 @@
                             <img src="assets/backWhite.png" alt="fake window back button">
                             <img src="assets/forwardWhite.png" alt="fake window forward button">
                             <img src="assets/refreshWhite.png" alt="fake window refresh button">
+                            <input type="text" value="https://www.tijsmartens.be" autofocus class="searchBar">
                         </class>
                     </div>
 
                 </div>
                 <div class="contentContainer">
                     <div class="imgContainer">
-                        <img src="assets/stickman.png" alt="picture of my head">
+                        <img src="assets/portrait.jpg" alt="picture of my head">
                     </div>
                     <div class="aboutMe">
-                        <!-- <p class="intro">Hi! I'm <strong>Tijs</strong></p>
-                        <p>I'm a webdeveloper.</p>
-                        <br>
-                        <p>But more than that, if you want, we can build an entire project together!</p> -->
-
                         <p>
-                            LOREM IPSUM
-                            LOREM IPSUM
-                            LOREM IPSUM
-                            LOREM IPSUM
-                            LOREM IPSUM
-                            LOREM IPSUM
+                            <H1>
+                                TIJS
+                                <br>
+                                MARTENS
+                            </H1>
+                            <div class="outline"></div>
+
+                            <p>be found online.</p>
                         </p>
                     </div>
                 </div>
@@ -71,6 +76,8 @@
                     <a href="https://be.linkedin.com/in/tijs-martens-4043aa136/en?trk=public_profile_locale_name"
                         target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/TijsM" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#contact" target="_blank"><i class="fas fa-envelope"></i></i></a>
+
                 </div>
             </div>
 
@@ -82,13 +89,23 @@
 
                 </div>
                 <div class="img_Container">
-                    <img src="assets/stickman.png" alt="">
+                    <img src="assets/portrait.jpg" alt="">
                 </div>
                 <div class="aboutMe">
-                    <p class="intro">Hi! I'm <strong>Tijs</strong></p>
+                    <!-- <p class="intro">Hi! I'm <strong>Tijs</strong></p>
                     <p>I'm a webdeveloper.</p>
                     <br>
-                    <p>But more than that, if you want, we can build an entire project together!</p>
+                    <p>But more than that, if you want, we can build an entire project together!</p> -->
+                    <p>
+                        <h1>
+                            TIJS
+                            <br>
+                            MARTENS
+                        </h1>
+                        <div class="outline"></div>
+
+                        <p>be found online.</p>
+                    </p>
                 </div>
                 <div class="links_containter">
                     <a href="https://be.linkedin.com/in/tijs-martens-4043aa136/en?trk=public_profile_locale_name"
@@ -104,14 +121,22 @@
                 </div>
             </div>
         </div>
+
+        <div class="downContainer">
+            <a href="#skillSection"> <img src="/assets/downWhite.png" alt=""></a>
+        </div>
     </header>
 
-    <section class="skills"  data-aos="fade-up">
-        <h1>SKILLS <br/> AND WORK</h1>
+    <div id="buttonToTopContainer" data-aos="fade-bottom" data-aos-anchor-placement="top-top">
+        <a href="#landing"> <i class="fas fa-chevron-up"></i></a>
+    </div>
+
+    <section class="skills" id='skillSection' data-aos="fade-up">
+        <h1>SKILLS <br /> AND WORK</h1>
         <div class="outline" data-aos="fade-right" data-aos-anchor-placement="top-center"></div>
         <div class="skillContainer">
+            <article class="aSkill" data-aos="fade-up">
 
-            <article class="aSkill cardContainer java" data-aos="fade-up">
                 <div class="overlay">
                     <div class=" cardTitle">
                         <p>Java</p>
@@ -126,11 +151,12 @@
                         <div class="icoContainer"><a href="https://github.com/TijsM/Taijitan_Java"><i
                                     class="fab fa-github"></i></a></div>
                     </div>
+
                 </div>
             </article>
 
 
-            <article class="aSkill cardContainer " data-aos="fade-up">
+            <article class="aSkill " data-aos="fade-up">
                 <div class="overlay">
                     <div class=" cardTitle">
                         <p>SQL</p>
@@ -150,7 +176,7 @@
 
 
 
-            <article class="aSkill cardContainer " data-aos="fade-up">
+            <article class="aSkill " data-aos="fade-up">
                 <div class="overlay">
                     <div class=" cardTitle">
                         <p>JavaScript</p>
@@ -169,7 +195,7 @@
 
 
 
-            <article class="aSkill cardContainer " data-aos="fade-up">
+            <article class="aSkill" data-aos="fade-up">
                 <div class="overlay">
                     <div class=" cardTitle">
                         <p>C# - .Net</p>
@@ -191,7 +217,7 @@
             </article>
 
 
-            <article class="aSkill cardContainer " data-aos="fade-up">
+            <article class="aSkill" data-aos="fade-up">
                 <div class="overlay">
                     <div class=" cardTitle">
                         <p>Angular</p>
@@ -210,7 +236,7 @@
             </article>
 
 
-            <article class="aSkill cardContainer " data-aos="fade-up">
+            <article class="aSkill" data-aos="fade-up">
                 <div class="overlay">
                     <div class=" cardTitle">
                         <p>PHP</p>
@@ -226,17 +252,13 @@
                     </div>
                 </div>
             </article>
-
-
-
-
         </div>
     </section>
     <section class="skills futureSkills">
         <h1>FUTURE TECHNOLOGIES</h1>
         <div class="outline" data-aos="fade-right" data-aos-anchor-placement="top-center"></div>
         <div class="skillContainer">
-            <article class="aSkill cardContainer java" data-aos="fade-up">
+            <article class="aSkill" data-aos="fade-up">
                 <div class="overlay">
                     <div class=" cardTitle">
                         <p>React</p>
@@ -248,7 +270,7 @@
                 </div>
             </article>
 
-            <article class="aSkill cardContainer java" data-aos="fade-up">
+            <article class="aSkill" data-aos="fade-up">
                 <div class="overlay">
                     <div class=" cardTitle">
                         <p>React Native</p>
@@ -260,7 +282,7 @@
                 </div>
             </article>
 
-            <article class="aSkill cardContainer java" data-aos="fade-up">
+            <article class="aSkill" data-aos="fade-up">
                 <div class="overlay">
                     <div class=" cardTitle">
                         <p>Node.js</p>
@@ -272,28 +294,25 @@
                 </div>
             </article>
         </div>
-
-
-
     </section>
-    <section class="contact">
+    <section id="contact">
         <!-- <h1>Let's create an <strong>awesome</strong> project together!</h1>
 
         <h1>send me a message.</h1> -->
 
         <h1>CONTACT ME!</h1>
         <div class="outline" data-aos="fade-right" data-aos-anchor-placement="top-center"></div>
-        <form action="">
-            <p class="label" data-aos="fade-right">Your mail </p>
-            <input type="text" data-aos="fade-left">
-            <p class="label" data-aos="fade-right">Full name </p>
-            <input type="text" data-aos="fade-left">
-            <p class="label" data-aos="fade-right">Shoot your question!</p>
-            <textarea class="textArea" data-aos="fade-left" cols="30" rows="18"></textarea>
-
-            <a href="" class="button" data-aos="fade-up">send!</a>
-            <!-- how to submit with link -> https://stackoverflow.com/questions/7340300/a-tag-as-a-submit-button/7340340 -->
+        <form id="contact-form">
+            <p class="label" data-aos="fade-down">Your mail </p>
+            <input type="email" id="mail" required data-aos="fade-down" name="mail_address">
+            <p class="label" data-aos="fade-down">Full name </p>
+            <input type="text" id="name" required data-aos="fade-down" name="sender_name">
+            <p class="label" data-aos="fade-down">Shoot your question!</p>
+            <textarea class="textArea" id='content' required data-aos="fade-down" cols="25" rows="12" name="message"></textarea>
+            <input href="" class="button" type="submit" data-aos="fade-down" value="SEND!"></input>
         </form>
+
+
 
     </section>
 
@@ -318,6 +337,10 @@
         </div>
     </footer>
 
+    <div id="mailConfirmation">
+        The mail was sent! I will answer as fast as possible.
+    </div>
+
 
 
 
@@ -332,11 +355,15 @@
         });
     </script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <!-- source: https://micku7zu.github.io/vanilla-tilt.js/ -->
     <script src="node_modules/aos/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <!-- source: https://micku7zu.github.io/vanilla-tilt.js/ -->
+    <script src="app.js"></script>
+    <script src="zenscroll-min.js"></script>
+
 </body>
+
 
 </html>
