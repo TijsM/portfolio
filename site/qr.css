@@ -1,0 +1,12 @@
+.qrContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  padding-top: 250px;
+}
+/*# sourceMappingURL=qr.css.map */

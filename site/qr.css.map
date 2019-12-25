@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAA;EACR,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,KAAK;CACrB",
+    "sources": [
+        "qr.scss"
+    ],
+    "names": [],
+    "file": "qr.css"
+}

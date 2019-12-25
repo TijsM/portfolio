@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tijs Martens - contact</title>
+    <link rel="stylesheet" href="reset.css" class="css">
+    <link rel="stylesheet" href="style.css" class="css">
+    <link rel="stylesheet" href="qr.css" class="css">
+    <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <meta name="description" content="Webveloper with a passion for marketing based in Ghent, Belgium">
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+<script src="https://www.vantajs.com/dist/vanta.waves.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("user_24HpkEdYI2bCtwxzDUnSk");
+    })();
+</script>
+<script src="send-mail.js"></script>
+
+<body>
+    <div id="vantaBg">
+
+    </div>
+
+
+    
+  <div class="qrContainer">
+        <img src="./assets/qr.gif" alt="qr code with contact detail">
+  </div>
+    
+
+
+    <footer>
+        <div class="footerContainer">
+            <div class="linkedIn">
+                <a href="https://be.linkedin.com/in/tijs-martens-4043aa136/en?trk=public_profile_locale_name"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                <!-- <a href="https://be.linkedin.com/in/tijs-martens-4043aa136/en?trk=public_profile_locale_name"
+                    target="_blank"><img src="assets/linkedin_white.png" alt="link to linkedin"></a> -->
+            </div>
+            <div class="name">
+                <h1>Tijs Martens</h1>
+            </div>
+            <div class="github">
+                <a href="https://github.com/TijsM" target="_blank">
+                    <i class="fab fa-github"></i></a>
+                <!-- <a href="https://github.com/TijsM" target="_blank"><img src="assets/github_white.png"
+                        alt="link to my github profile"></a> -->
+            </div>
+        </div>
+    </footer>
+
+    <div id="mailConfirmation">
+        The mail was sent! I will answer as fast as possible.
+    </div>
+
+
+
+
+    <script>
+        VANTA.WAVES({
+            el: "#vantaBg",
+            color: 0x1d1f21,
+            waveHeight: 50,
+            shininess: 42.00,
+            zoom: 0.65,
+            waveSpeed: 0.45
+        });
+    </script>
+
+
+
+</body>
+
+
+</html>
