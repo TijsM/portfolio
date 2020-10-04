@@ -470,12 +470,12 @@ section .cardContainer .card .overlay {
   margin-top: 50px;
   z-index: 2;
   border-radius: 15px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 2fr 2fr 1fr;
-      grid-template-rows: 1fr 2fr 2fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: none;
   background-color: #494944cb;
   color: white;
@@ -602,9 +602,13 @@ section .cardContainer :hover .overlay .info {
   color: white;
 }
 
+.projectSection .projectContainer .card .projectInformation a {
+  color: white;
+}
+
 .projectSection .projectContainer .card .overlay {
   margin-top: 15px;
-  height: 100px;
+  height: 60px;
   background-color: none;
   position: absolute;
   bottom: 0;
